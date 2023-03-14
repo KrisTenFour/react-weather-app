@@ -20,6 +20,6 @@ export default function FormattedDate(props) {
     }
 
     return <div>
-        {day}, {hour}:{minutes}, {date}/{month}/{year}
+        {day} {hour}:{minutes}, {date}/{month}/{year}
     </div>
 }
