@@ -4,7 +4,7 @@ import Weather from "./Weather"
 function App() {
   return (
     <div className="App">
-      <Weather />
+      <Weather defaultCity="London" />
       <footer>
         <p>This page was coded by{" "}
           <a href="https://kristen-n.netlify.app/" target="_blank" rel="noreferrer">Kristen Namigai</a>🧝🏻‍♀️and is{" "}
