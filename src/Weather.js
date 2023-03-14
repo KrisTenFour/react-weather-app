@@ -1,5 +1,6 @@
 import React from "react"
 import 'bootstrap/dist/css/bootstrap.css';
+import axios from "axios"
 
 import "./Weather.css"
 
