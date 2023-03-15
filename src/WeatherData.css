@@ -1,0 +1,43 @@
+.WeatherData {
+    padding: 20px;
+    border: 0.1mm solid lightblue;
+    border-radius: 2mm;
+}
+
+.WeatherData form {
+    margin-bottom: 15px;
+}
+
+.WeatherData .Date {
+    font-size: 13px;
+}
+
+.WeatherData .City h1 {
+    margin: 0;
+    font-size: 35px;
+}
+
+.WeatherData .Current-temp img {
+    height: 80px;
+    width: 80px;
+}
+
+.WeatherData .Current-temp .Temperature {
+    font-size: 60px;
+}
+
+.WeatherData .Card {
+    width: 60%;
+    margin: 0 auto;
+    padding: 10px;
+    background: rgba(211, 211, 211, 0.247);
+    border-radius: 2mm;
+    font-size: 14px;
+}
+
+.WeatherData .Card ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+}
