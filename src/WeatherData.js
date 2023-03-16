@@ -16,13 +16,15 @@ export default function WeatherData(props) {
                     <FormattedDate date={props.data.date} />
                 </div>
                 <div className="Current-temp">
-                    <div className="row gx-0">
-                        <div className="col d-flex align-items-center justify-content-center mb-2">
+                    <div className="row">
+                        <div className="col d-flex align-items-center justify-content-end mt-3 mb-2">
                             <WeatherIcon iconCode={props.data.icon} />
                         </div>
-                        <div className="col d-flex align-items-center justify-content-center">
+                        <div className="col d-flex align-items-center justify-content-start">
                             <WeatherTemperature celsius={props.data.temperature} />
                         </div>
+                    </div>
+                    <div className="row">
                         <div className="col d-flex align-items-center">
                             <div className="Card subtext">
                                 <ul>
