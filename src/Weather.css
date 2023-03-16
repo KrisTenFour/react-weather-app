@@ -3,6 +3,7 @@
 }
 
 .Weather {
+    max-width: 600px;
     background: #5a4668;
     border: 0.1mm solid #9473AC;
     border-radius: 2mm;
