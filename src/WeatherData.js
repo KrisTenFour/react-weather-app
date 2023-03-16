@@ -15,9 +15,13 @@ export default function WeatherData(props) {
             </div>
             <div className="Current-temp">
                 <div className="row">
-                    <div className="col d-flex justify-content-start">
+                    <div className="col d-flex align-items-center justify-content-center">
                         <WeatherIcon iconCode={props.data.icon} />
-                        <p className="Temperature">{props.data.temperature}°C</p>
+                    </div>
+                    <div className="col d-flex align-items-center">
+                        <p className="Temperature">
+                            {props.data.temperature}°C
+                        </p>
                     </div>
                     <div className="col d-flex align-items-center">
                         <div className="Card subtext">
