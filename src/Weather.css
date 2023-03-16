@@ -4,10 +4,10 @@
 
 .Weather {
     max-width: 600px;
-    background: #a7d9e2;
+    background: rgb(247, 254, 255);
     border: 0.1mm solid #9fd9f1;
     border-radius: 2mm;
-    box-shadow: 3px 4px 10px rgb(189, 189, 189);
+    box-shadow: 3px 3px 25px rgb(157, 182, 187);
 }
 
 .Weather form {
