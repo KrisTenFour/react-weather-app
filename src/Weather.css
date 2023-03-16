@@ -1,3 +1,12 @@
 .subtext {
     opacity: 70%;
 }
+
+.Weather {
+    border: 0.1mm solid lightblue;
+    border-radius: 2mm;
+}
+
+.Weather form {
+    margin-top: 10px;
+}
