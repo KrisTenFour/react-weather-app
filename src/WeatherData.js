@@ -28,7 +28,9 @@ export default function WeatherData(props) {
                         <div className="col d-flex align-items-center">
                             <div className="Card subtext">
                                 <ul>
-                                    <li className="text-capitalize">{props.data.description}</li>
+                                    <li className="text-capitalize">
+                                        <strong>{props.data.description}</strong>
+                                    </li>
                                     <li>Humidity: {props.data.humidity}%</li>
                                     <li>Wind: {props.data.wind}km/h</li>
                                 </ul>
