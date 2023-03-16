@@ -14,11 +14,11 @@ export default function WeatherData(props) {
                 <p><FormattedDate date={props.data.date} /></p>
             </div>
             <div className="Current-temp">
-                <div className="row">
-                    <div className="col d-flex align-items-center justify-content-center">
+                <div className="row gx-0">
+                    <div className="col d-flex align-items-center justify-content-center mb-2">
                         <WeatherIcon iconCode={props.data.icon} />
                     </div>
-                    <div className="col d-flex align-items-center">
+                    <div className="col d-flex align-items-center justify-content-center">
                         <p className="Temperature">
                             {props.data.temperature}°C
                         </p>

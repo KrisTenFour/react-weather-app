@@ -1,6 +1,8 @@
 .WeatherData .City,
-.Date {
-    text-align: center;
+.Date,
+.Current-temp,
+.Card {
+    color: #ffb9fa;
 }
 
 .WeatherData {
@@ -33,7 +35,6 @@
     width: 100%;
     margin: 0 auto;
     padding: 10px;
-    background: rgba(211, 211, 211, 0.247);
     border-radius: 2mm;
     font-size: 14px;
 }

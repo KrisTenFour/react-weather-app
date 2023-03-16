@@ -1,12 +1,18 @@
 .subtext {
-    opacity: 70%;
+    opacity: 80%;
 }
 
 .Weather {
-    border: 0.1mm solid lightblue;
+    background: #5a4668;
+    border: 0.1mm solid #9473AC;
     border-radius: 2mm;
+    box-shadow: 3px 3px 6px rgb(189, 189, 189);
 }
 
 .Weather form {
     margin-top: 10px;
+}
+
+.Weather btn {
+    color: red;
 }
