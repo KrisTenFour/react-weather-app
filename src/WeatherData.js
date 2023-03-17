@@ -18,7 +18,7 @@ export default function WeatherData(props) {
                 <div className="Current-temp">
                     <div className="row">
                         <div className="col d-flex align-items-center justify-content-end mt-3 mb-2">
-                            <WeatherIcon iconCode={props.data.icon} />
+                            <WeatherIcon iconCode={props.data.icon} size={68} />
                         </div>
                         <div className="col d-flex align-items-center justify-content-start">
                             <WeatherTemperature celsius={props.data.temperature} />
