@@ -15,7 +15,13 @@ export default function WeatherForecast(props) {
 
     if (loaded) {
         return (
-            <WeatherForecastDay data={forecast} />
+            < div className="WeatherForecast" >
+                <div className="row">
+                    <div className="col">
+                        <WeatherForecastDay data={forecast} />
+                    </div>
+                </div>
+            </div >
         )
     } else {
         let apiKey = "b1a8336ff1e05b64da5625e4158fbea3";
