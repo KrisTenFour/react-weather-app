@@ -1,0 +1,11 @@
+.WeatherForecastDay {
+    margin-bottom: 30px;
+}
+
+.WeatherForecastDay .Forecast-day {
+    margin-bottom: 8px;
+}
+
+.WeatherForecastDay .Forecast-temp-max {
+    margin-right: 3px;
+}
