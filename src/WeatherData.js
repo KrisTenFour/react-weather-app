@@ -26,13 +26,13 @@ export default function WeatherData(props) {
                     </div>
                     <div className="row">
                         <div className="col d-flex align-items-center">
-                            <div className="Card subtext">
+                            <div className="Card ">
                                 <ul>
-                                    <li className="text-capitalize">
+                                    <li className="description text-capitalize">
                                         <strong>{props.data.description}</strong>
                                     </li>
-                                    <li>Humidity: {props.data.humidity}%</li>
-                                    <li>Wind: {props.data.wind}km/h</li>
+                                    <li className="subtext">Humidity: {props.data.humidity}%</li>
+                                    <li className="subtext">Wind: {props.data.wind}km/h</li>
                                 </ul>
                             </div>
                         </div>

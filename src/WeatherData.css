@@ -1,8 +1,9 @@
 .WeatherData .City,
 .Date,
 .Current-temp,
-.Card {
-    color: rgb(43, 44, 45);
+.Card,
+.Card .description {
+    color: #18e392;
 }
 
 .WeatherData {
@@ -22,9 +23,9 @@
     font-size: 13px;
 }
 
-.WeatherData .Current-temp img {
-    height: 80px;
-    width: 80px;
+.WeatherData .temperature {
+    position: relative;
+    top: 4px
 }
 
 .WeatherData .Card {

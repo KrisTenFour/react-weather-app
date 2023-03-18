@@ -1,15 +1,16 @@
 .subtext {
-    opacity: 80%;
+    opacity: 83%;
 }
 
 .Weather {
     max-width: 600px;
-    background: rgb(247, 254, 255);
-    border: 0.1mm solid #9fd9f1;
+    background: #50056e;
+    border: 0.1mm solid #4f066b;
     border-radius: 2mm;
-    box-shadow: 3px 3px 25px rgb(157, 182, 187);
+    box-shadow: 3px 3px 25px #9b7ab8;
 }
 
 .Weather form {
-    margin-top: 10px;
+    margin: 15px 30px;
+    margin-bottom: 0;
 }
