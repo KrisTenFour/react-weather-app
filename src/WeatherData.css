@@ -42,3 +42,9 @@
     list-style: none;
     text-align: center;
 }
+
+@media (max-width: 650px) {
+    .WeatherData {
+        padding-top: 15px;
+    }
+}

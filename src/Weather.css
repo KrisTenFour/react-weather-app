@@ -14,3 +14,34 @@
     margin: 15px 30px;
     margin-bottom: 0;
 }
+
+.Weather .form-control,
+.btn {
+    margin: 5px;
+    font-size: 14px;
+}
+
+@media (max-width: 650px) {
+    .Weather form {
+        margin: 12px 18px;
+        margin-bottom: 0;
+    }
+
+    .Weather .form-control,
+    .btn {
+        margin: 5px;
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 441px) {
+    .Weather form {
+        margin: 10px;
+        margin-bottom: 0;
+    }
+
+    .Weather .form-control,
+    .btn {
+        font-size: 13px;
+    }
+}

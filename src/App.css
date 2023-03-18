@@ -10,3 +10,31 @@
     font-size: 12px;
     letter-spacing: 0;
 }
+
+@media (max-width: 895px) {
+    .App {
+        margin: 25px 50px;
+    }
+}
+
+@media (max-width: 650px) {
+    .App {
+        margin: 20px 30px;
+    }
+}
+
+@media (max-width: 590px) {
+    .App {
+        margin: 10px 15px;
+    }
+}
+
+@media (max-width: 441px) {
+    .App {
+        margin: 5px;
+    }
+
+    .App footer {
+        font-size: 11px;
+    }
+}
