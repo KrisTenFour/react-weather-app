@@ -4,15 +4,7 @@
 
 .WeatherTemperature .unit {
     position: relative;
-    bottom: 30px;
-    left: 5px;
-    font-size: 18px;
-}
-
-.WeatherTemperature a {
-    text-decoration: none;
-}
-
-.WeatherTemperature a:hover {
-    text-decoration: underline;
+    bottom: 26px;
+    left: 4px;
+    font-size: 23px;
 }
