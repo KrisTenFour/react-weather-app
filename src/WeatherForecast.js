@@ -3,6 +3,8 @@ import axios from "axios";
 import 'bootstrap/dist/css/bootstrap.css';
 import WeatherForecastDay from "./WeatherForecastDay";
 
+import "./WeatherForecast.css"
+
 export default function WeatherForecast(props) {
     const [forecast, setForecast] = useState(null);
     const [loaded, setLoaded] = useState(false);
