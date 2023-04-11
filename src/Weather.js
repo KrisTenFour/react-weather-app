@@ -2,6 +2,7 @@ import React, { useState } from "react"
 import axios from "axios"
 import WeatherData from "./WeatherData";
 import WeatherForecast from "./WeatherForecast"
+import CurrentLocation from "./CurrentLocation";
 import 'bootstrap/dist/css/bootstrap.css';
 import "./Weather.css"
 
@@ -51,7 +52,7 @@ export default function Weather(props) {
                                 className="btn btn-secondary w-100"></input>
                         </div>
                         <div className="col-2">
-                            <input type="button" value="Current" className="btn btn-secondary w-100"></input>
+                            <CurrentLocation />
                         </div>
                     </div>
                 </form>
