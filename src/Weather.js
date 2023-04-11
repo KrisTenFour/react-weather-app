@@ -2,7 +2,6 @@ import React, { useState } from "react"
 import axios from "axios"
 import WeatherData from "./WeatherData";
 import WeatherForecast from "./WeatherForecast"
-import CurrentLocation from "./CurrentLocation";
 import 'bootstrap/dist/css/bootstrap.css';
 import "./Weather.css"
 
@@ -44,15 +43,12 @@ export default function Weather(props) {
             <div className="Weather container">
                 <form onSubmit={handleSubmit}>
                     <div className="row gx-2">
-                        <div className="col-8">
+                        <div className="col-9">
                             <input type="text" placeholder="Enter city..." autoFocus="on" className="form-control" onChange={handleCityChange} ></input>
                         </div>
-                        <div className="col-2">
+                        <div className="col-3">
                             <input type="submit" value="Search"
                                 className="btn btn-secondary w-100"></input>
-                        </div>
-                        <div className="col-2">
-                            <CurrentLocation />
                         </div>
                     </div>
                 </form>
