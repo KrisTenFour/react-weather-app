@@ -5,12 +5,12 @@ import "./WeatherForecastDay.css"
 
 export default function WeatherForecastDay(props) {
     function maxTemperature() {
-        let maxTemperature = Math.round(props.data.temp.max);
+        let maxTemperature = Math.round(props.data.main.temp_max);
         return `${maxTemperature}`
     }
 
     function minTemperature() {
-        let minTemperature = Math.round(props.data.temp.min);
+        let minTemperature = Math.round(props.data.main.temp_min);
         return `${minTemperature}`
     }
 
