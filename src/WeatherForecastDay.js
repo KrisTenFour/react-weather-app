@@ -14,17 +14,17 @@ export default function WeatherForecastDay(props) {
         return `${minTemperature}`
     }
 
-    function day() {
+    function formatDay() {
         let date = new Date(props.data.dt * 1000);
-        let day = date.getDay();
+        let dayIndex = date.getDay();
         let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 
-        return days[day];
+        return days[dayIndex];
     }
 
     return (
         <div className="WeatherForecastDay">
-            <div className="Forecast-day subtext">{day()}</div>
+            <div className="Forecast-day subtext">{formatDay()}</div>
             <WeatherIcon iconCode={props.data.weather[0].icon} size={35} />
             <div className="Forecast-temperature subtext">
                 <span className="Forecast-temp-max"><strong>{maxTemperature()}°</strong></span>
