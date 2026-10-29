@@ -28,20 +28,18 @@ export default function WeatherForecast(props) {
     }, [props.coordinates]);
 
     if (loaded) {
+        console.log(forecast)
         return (
             < div className="WeatherForecast" >
                 <div className="container">
                     <div className="row">
-                        {forecast.map(function (dailyForecast, index) {
-                            if (index < 5) {
+                        {forecast.filter(function (dailyForecast) { return dailyForecast.dt_txt.includes("09:00:00"); })
+                            .slice(0, 5).map(function (dailyForecast, index) {
                                 return (
                                     <div className="col" key={index}>
                                         <WeatherForecastDay data={dailyForecast} />
                                     </div>)
-                            } else {
-                                return (null)
-                            }
-                        })}
+                            })}
                     </div>
                 </div>
             </div >
