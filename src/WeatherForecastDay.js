@@ -17,10 +17,11 @@ export default function WeatherForecastDay(props) {
 
     function formatDay() {
         let date = new Date(props.data.date_epoch * 1000);
+        const isToday = date.toDateString() === new Date().toDateString();
         let dayIndex = date.getDay();
         let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 
-        return days[dayIndex];
+        return isToday ? "Today" : days[dayIndex];
     }
 
     return (
