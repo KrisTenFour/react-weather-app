@@ -10,15 +10,16 @@ export default function WeatherForecast(props) {
     const [loaded, setLoaded] = useState(false);
 
     function handleResponse(response) {
-        setForecast(response.data.list);
+        console.log(response)
+        setForecast(response.data.forecast.forecastday);
         setLoaded(true);
     }
 
     function load() {
-        let apiKey = "5ef4de8cd6b7fefcd7c42f98cf464ce8";
+        let apiKey = "9726efbe8ded47b6b6795813262910";
         let latitude = props.coordinates.lat;
         let longitude = props.coordinates.lon;
-        let apiUrl = `https://api.openweathermap.org/data/2.5/forecast?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`;
+        let apiUrl = `https://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${latitude},${longitude}&days=3&aqi=no&alerts=no`;
 
         axios.get(apiUrl).then(handleResponse)
     }
@@ -28,18 +29,20 @@ export default function WeatherForecast(props) {
     }, [props.coordinates]);
 
     if (loaded) {
-        console.log(forecast)
         return (
             < div className="WeatherForecast" >
                 <div className="container">
                     <div className="row">
-                        {forecast.filter(function (dailyForecast) { return dailyForecast.dt_txt.includes("09:00:00"); })
-                            .slice(0, 5).map(function (dailyForecast, index) {
+                        {forecast.map(function (dailyForecast, index) {
+                            if (index < 3) {
                                 return (
                                     <div className="col" key={index}>
                                         <WeatherForecastDay data={dailyForecast} />
                                     </div>)
-                            })}
+                            } else {
+                                return (null)
+                            }
+                        })}
                     </div>
                 </div>
             </div >
