@@ -12,6 +12,8 @@ export default function Weather(props) {
     function handleResponse(response) {
         const apiWeatherData = response.data;
 
+        console.log(apiWeatherData)
+
         if (!apiWeatherData || !apiWeatherData.current || !apiWeatherData.location) {
             console.log("Skipping empty or incomplete API response data.");
             return;
@@ -26,7 +28,7 @@ export default function Weather(props) {
             humidity: apiWeatherData.current.humidity,
             wind: Math.round(apiWeatherData.current.wind_kph),
             description: apiWeatherData.current.condition.text,
-            icon: apiWeatherData.current.condition.icon
+            icon: apiWeatherData.current.condition.code
         })
     }
 
