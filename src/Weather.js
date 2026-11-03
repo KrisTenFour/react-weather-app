@@ -12,8 +12,6 @@ export default function Weather(props) {
     function handleResponse(response) {
         const apiWeatherData = response.data;
 
-        console.log(apiWeatherData)
-
         if (!apiWeatherData || !apiWeatherData.current || !apiWeatherData.location) {
             console.log("Skipping empty or incomplete API response data.");
             return;
