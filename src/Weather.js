@@ -10,22 +10,31 @@ export default function Weather(props) {
     const [city, setCity] = useState(props.defaultCity)
 
     function handleResponse(response) {
+        const apiWeatherData = response.data;
+
+        console.log(apiWeatherData)
+
+        if (!apiWeatherData || !apiWeatherData.current || !apiWeatherData.location) {
+            console.log("Skipping empty or incomplete API response data.");
+            return;
+        }
+
         setWeatherData({
             ready: true,
-            city: response.data.name,
-            coordinates: response.data.coord,
-            date: new Date(response.data.dt * 1000),
-            temperature: Math.round(response.data.main.temp),
-            humidity: response.data.main.humidity,
-            wind: Math.round(response.data.wind.speed),
-            description: response.data.weather[0].description,
-            icon: response.data.weather[0].icon
+            city: apiWeatherData.location.name,
+            coordinates: apiWeatherData.location,
+            date: new Date(apiWeatherData.current.last_updated_epoch * 1000),
+            temperature: Math.round(apiWeatherData.current.temp_c),
+            humidity: apiWeatherData.current.humidity,
+            wind: Math.round(apiWeatherData.current.wind_kph),
+            description: apiWeatherData.current.condition.text,
+            icon: apiWeatherData.current.condition.icon
         })
     }
 
     function search() {
-        const apiKey = "4fc04cc47e058f9ab06aa6b5cf324885"
-        let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`
+        const apiKey = "9726efbe8ded47b6b6795813262910"
+        let apiUrl = `https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${city}`
         axios.get(apiUrl).then(handleResponse)
     }
 
